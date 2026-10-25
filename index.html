@@ -21,27 +21,126 @@
 
 <body>
 
+   <div id="app">
     <aside>
         <div class="aside-container">
-            <img src="assets/Logo (1).svg" alt="fogos">
-            <h1>Aniversário de Elielson DV</h1>
-            <p>
-                Venha celebrar essa data especial comigo
-            </p>
-           
+            <header>
+                <img src="assets/Logo (1).svg" alt="icone de festa">
+                <h1>
+                    Aniversário<br>de<br>Elielson DV
+                </h1>
+                <P>
+                    Venha comemorar esse dia especial comigo 🎉🎉🎉
+                </P>
+            </header>
 
+            <img src="assets/Background.svg" alt="bolo de aniversário">
         </div>
     </aside>
 
-    <div id="app">
-        <main>
-            <div class="main-container">
-                <h1>Você está convidado</h1>
-            </div>
-        </main>
-    </div>
-        
+    <main>
+        <div class="main-container">
+            <h1>
+                Crie seu convite
+            </h1>
 
+            <form method="post" enctype="multipart/form-data">
+                <fieldset class="about">
+                    <legend>
+                        <img src="assets/icons/calendar.svg" alt="calendário">
+                        Sobre o evento
+                    </legend>
+
+                    <div class="input-wrapper">
+                        <label for="title">Título</label>
+
+                        <input type="text" id="title" name="title"
+                        placeholder="nome do evento">
+                    </div>
+
+                    <div class="info">
+                        <div class="input-wrapper info-1">
+                            <label for="start">Início</label>
+
+                            <input 
+                            type="datetime-local" 
+                            id="start" 
+                            name="start">
+                        </div>
+
+                        <div class="input-wrapper info-1">
+
+                            <label for="end">Fim</label>
+                            
+                            <input 
+                            type="datetime-local" 
+                            id="end" 
+                            name="end">
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="input-wrapper flex-1">
+                            
+                            <label>Tipo</label>
+
+                            <div class="radio-wrapper">
+                                <div class="radio-inner">
+
+                                    <input 
+                                    type="radio"
+                                    name="type" 
+                                    value="presencial" 
+                                    id="presencial" 
+                                    checked>
+
+                                    <img src="assets/icons/building-2.svg" alt="predio">
+
+                                    <label for="online" id="line">Online</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper info-1">
+                            
+                            <label for="local">Local</label>
+
+                            <input 
+                            type="text" 
+                            id="local" 
+                            name="local" 
+                            placeholder="Link ou Endereço">
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        
+                        <label for="description">Descrição</label>
+
+                        <textarea 
+                        id="description" 
+                        name="description" 
+                        placeholder="Escreva sobre o detalhe do Evento" 
+                        rows="5">
+                    </textarea>
+                    </div>
+                    
+                </fieldset>
+
+                <fieldset class="customization">
+                    <legend>
+                        <img src="assets/icons/paintbrush-vertical.svg" alt="pincel">
+                        Personalização
+                    </legend>
+
+                    
+                </fieldset>
+                    
+                            
+            </form>
+        </div>
+    </main>
+   </div>
 
 </body>
 
