@@ -9,7 +9,9 @@
   color: var(--text-body);
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   width: 100%;
   background: var(--input-base);
   border: 1px solid var(--input-stroke);
@@ -19,7 +21,8 @@ input, textarea, select {
   color: var(--text-heading);
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--input-placeholder);
 }
 
@@ -145,7 +148,7 @@ textarea {
   border-color: var(--brand-light);
 }
 
-/* ESTILO - Switch escuro */
+/* ESTILO - escuro */
 .switch-wrapper {
   display: flex;
   align-items: center;
@@ -276,4 +279,3 @@ textarea {
   object-position: top !important;
   display: block;
 }
-
