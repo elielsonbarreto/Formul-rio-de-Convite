@@ -1,151 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
+  
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Convite</title>
-
-    <link rel="stylesheet" href="./styles/index.css">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite de Aniversário</title>
+  
+  <link rel="stylesheet" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Leckerli+One&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 </head>
-
-
 <body>
-
-   <div id="app">
+  <div id="app">
     <aside>
-        <div class="aside-container">
-            <header>
-                <img src="assets/Logo (1).svg" alt="icone de festa">
-                <h1>
-                    Aniversário<br>de<br>Elielson DV
-                </h1>
-                <P>
-                    Venha comemorar esse dia especial comigo 🎉🎉🎉
-                </P>
-            </header>
-
-            <img src="assets/Background.svg" alt="bolo de aniversário">
-        </div>
+      <div class="aside-container">
+        <img src="assets/Logo (1).svg" alt="Festivite">
+        <h1>Aniversário de<br>Elielson DV</h1>
+        <p>Venha comemorar comigo esse dia especial.</p>
+      </div>
     </aside>
 
     <main>
-        <div class="main-container">
-            <h1>
-                Crie seu convite
-            </h1>
+      <div class="main-container">
+        <h2>Crie seu convite</h2>
+        
+        <form>
+          <!-- SOBRE O EVENTO -->
+          <fieldset>
+            <legend><img src="assets/icons/calendar.svg" alt=""> Sobre o evento</legend>
+            
+            <div class="input-wrapper">
+              <label for="title">Título</label>
+              <input id="title" type="text" placeholder="Nome do evento">
+            </div>
 
-            <form method="post" enctype="multipart/form-data">
-                <fieldset class="about">
-                    <legend>
-                        <img src="assets/icons/calendar.svg" alt="calendário">
-                        Sobre o evento
-                    </legend>
+            <div class="flex">
+              <div class="input-wrapper flex-1">
+                <label for="start">Início</label>
+                <input id="start" type="datetime-local" value="2024-12-31T00:00">
+              </div>
+              <div class="input-wrapper flex-1">
+                <label for="end">Fim</label>
+                <input id="end" type="datetime-local">
+              </div>
+            </div>
 
-                    <div class="input-wrapper">
-                        <label for="title">Título</label>
+            <div class="flex">
+              <div class="input-wrapper flex-1" id="type">
+                <label>Tipo</label>
+                <div class="radio-wrapper">
+                  <div class="radio-inner">
+                    <img src="assets/icons/building.svg" alt="">
+                    <label>Presencial</label>
+                    <input type="radio" name="type" value="presencial">
+                  </div>
+                  <div class="radio-inner">
+                    <img src="assets/icons/video.svg" alt="">
+                    <label>Online</label>
+                    <input type="radio" name="type" value="online">
+                  </div>
+                </div>
+              </div>
 
-                        <input type="text" id="title" name="title"
-                        placeholder="nome do evento">
-                    </div>
+              <div class="input-wrapper flex-1">
+                <label for="local">Local</label>
+                <input id="local" type="text" placeholder="Link ou endereço">
+              </div>
+            </div>
 
-                    <div class="info">
-                        <div class="input-wrapper info-1">
-                            <label for="start">Início</label>
+            <div class="input-wrapper">
+              <label for="description">Descrição</label>
+              <textarea id="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
+            </div>
+          </fieldset>
 
-                            <input 
-                            type="datetime-local" 
-                            id="start" 
-                            name="start">
-                        </div>
+          <!-- PERSONALIZAÇÃO -->
+          <fieldset>
+            <legend><img src="assets/icons/paintbrush.svg" alt=""> Personalização</legend>
 
-                        <div class="input-wrapper info-1">
+            <div class="input-wrapper" id="colors">
+              <label>Cor principal</label>
+              <div class="radio-wrapper">
+                <div class="color-option"><input type="radio" name="color" style="background:#59B2FF"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#6A59FF"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#B259FF"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#FF59F9"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#FF598B"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#FF5959"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#FF8B59"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#FFCD59"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#E1FF59"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#59FF91"></div>
+                <div class="color-option"><input type="radio" name="color" style="background:#59FFF9"></div>
+              </div>
+            </div>
 
-                            <label for="end">Fim</label>
-                            
-                            <input 
-                            type="datetime-local" 
-                            id="end" 
-                            name="end">
-                        </div>
-                    </div>
+           <div class="input-wrapper theme">
+  <label>Tema do evento</label>
+<div class="radio-wrapper">
+  <div class="radio-inner"><img src="assets/aniversario.svg" alt=""><input type="radio" name="theme"><label>Aniversário</label></div>
+  <div class="radio-inner"><img src="assets/infantil-1.svg" alt=""><input type="radio" name="theme"><label>Infantil</label></div>
+  <div class="radio-inner"><img src="assets/formatura.svg" alt=""><input type="radio" name="theme"><label>Formatura</label></div>
+  <div class="radio-inner"><img src="assets/casamento.svg" alt=""><input type="radio" name="theme"><label>Casamento</label></div>
+  <div class="radio-inner"><img src="assets/cha de bebe.svg" alt=""><input type="radio" name="theme"><label>Chá de bebê</label></div>
+  <div class="radio-inner"><img src="assets/cha de panela.svg" alt=""><input type="radio" name="theme"><label>Chá de panela</label></div>
+  <div class="radio-inner"><img src="assets/carnaval.svg" alt=""><input type="radio" name="theme"><label>Carnaval</label></div>
+  <div class="radio-inner"><img src="assets/pascoa.svg" alt=""><input type="radio" name="theme"><label>Páscoa</label></div>
+  <div class="radio-inner"><img src="assets/sao joao.svg" alt=""><input type="radio" name="theme"><label>São João</label></div>
+  <div class="radio-inner"><img src="assets/halloween.svg" alt=""><input type="radio" name="theme"><label>Halloween</label></div>
+  <div class="radio-inner"><img src="assets/natal.svg" alt=""><input type="radio" name="theme"><label>Natal</label></div>
+  <div class="radio-inner"><img src="assets/outro.svg" alt=""><input type="radio" name="theme"><label>Outro</label></div>
+</div>
+</div>
 
-                    <div class="info">
-                        <div class="input-wrapper flex-1">
-                            
-                            <label>Tipo</label>
+            <div class="flex">
+              <div class="input-wrapper flex-1">
+                <label>Estilo</label>
+                <div class="switch-wrapper">
+                  <div class="switch"><input type="checkbox" id="dark"><span></span></div>
+                  <label for="dark">Escuro</label>
+                </div>
+              </div>
+              <div class="input-wrapper flex-2">
+                <label>Foto de capa</label>
+                <div class="file-wrapper">
+                  <input type="file" id="cover"><label for="cover">Selecionar</label>
+                  <span>Nenhum arquivo selecionado</span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
 
-                            <div class="radio-wrapper">
-                                <div class="radio-inner">
+          <!-- DADOS -->
+          <fieldset>
+            <legend><img src="assets/icons/contact.svg" alt=""> Dados para contato</legend>
+            <div class="input-wrapper"><label for="name">Nome</label><input id="name" type="text" placeholder="Nome completo" required><span class="error">Campo obrigatório</span></div>
+            <div class="flex">
+              <div class="input-wrapper flex-1"><label for="email">E-mail</label><input id="email" type="email" placeholder="exemplo@email.com"></div>
+              <div class="input-wrapper flex-1"><label for="phone">Telefone</label><input id="phone" type="text" placeholder="(99) 99999-9999"></div>
+            </div>
+          </fieldset>
 
-                                    <input 
-                                    type="radio"
-                                    name="type" 
-                                    value="presencial" 
-                                    id="presencial" 
-                                    checked>
+          <div class="terms">
+            <div class="checkbox-wrapper"><input type="checkbox" id="terms1"><label for="terms1">Li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade</strong></label></div>
+            <div class="checkbox-wrapper"><input type="checkbox" id="terms2"><label for="terms2">Aceito receber atualizações e promoções por e-mail</label></div>
+            <div class="checkbox-wrapper"><input type="checkbox" id="terms3"><label for="terms3">Aceito receber atualizações e promoções por SMS</label></div>
+          </div>
 
-                                    <img src="assets/icons/building-2.svg" alt="predio">
-
-                                    <label for="online" id="line">Online</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="input-wrapper info-1">
-                            
-                            <label for="local">Local</label>
-
-                            <input 
-                            type="text" 
-                            id="local" 
-                            name="local" 
-                            placeholder="Link ou Endereço">
-                        </div>
-                    </div>
-
-                    <div class="input-wrapper">
-                        
-                        <label for="description">Descrição</label>
-
-                        <textarea 
-                        id="description" 
-                        name="description" 
-                        placeholder="Escreva sobre o detalhe do Evento" 
-                        rows="5">
-                    </textarea>
-                    </div>
-                    
-                </fieldset>
-
-                <fieldset class="customization">
-                    <legend>
-                        <img src="assets/icons/paintbrush-vertical.svg" alt="pincel">
-                        Personalização
-                    </legend>
-
-                    
-                </fieldset>
-                    
-                            
-            </form>
-        </div>
+          <div class="actions">
+            <button type="submit"><img src="assets/icons/ticket.svg" alt=""> Gerar convite</button>
+          </div>
+        </form>
+      </div>
     </main>
-   </div>
-
+  </div>
 </body>
-
 </html>
-
-
-
-    

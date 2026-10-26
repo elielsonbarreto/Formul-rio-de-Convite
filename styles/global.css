@@ -44,15 +44,18 @@
 
      --shape-background: #131516;
      --shape-body: #212427;
-     --chape-button: #2D3136;
-     --chape-hover: #383D42;
+     --shape-button: #2D3136;
+     --shape-hover: #383D42;
 
      --text-body: #C8CDD0;
      --text-heading: #F9F9F9;
 
      body {
+        font-family: "open sans", sans-serif;
+        color: var(--text-body);
+        background-color: #131516;
         overflow: hidden;
-        display: grid;
+       
      }
 
 

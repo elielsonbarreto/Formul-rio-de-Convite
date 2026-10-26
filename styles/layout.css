@@ -1,52 +1,49 @@
-body {
-    display: grid;
-    grid-template-columns: 32.8% 67.2%;
-
-    height: 100vh;
-    overflow: hidden;
-    gap: 0;
-
+#app {
+  display: grid;
+  grid-template-columns: 32.75rem 51.25rem;
+  height: 100vh;
+  overflow: hidden;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background-color: var(--shape-background);
 }
-
-.aside-container {
-    position: relative;
-    height: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-
-    background-image: url(../assets/Background.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.aside-container > img:last-child {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
-}
-
-
 
 aside {
-    background-color: var(--shape-background);
-    padding: 2rem;
-    overflow: hidden;
+  background: url(../assets/Background.svg) no-repeat center/cover;
+  border-radius: .75rem;
+  padding: 2rem;
 }
 
-
-
-
-
-#app {
-    overflow: auto;
-    padding: 4rem;
-    background-color: var(--shape-body);
+aside .aside-container {
+  max-width: 21rem;
 }
 
-.main-container {
-    max-width: 560px;
+aside h1 {
+  font: 400 2.5rem "Leckerli One", cursive;
+  color: #FF598B;
+  margin-top: 1rem;
+}
+
+aside p {
+  font: 300 1rem "Open Sans", sans-serif;
+  color: var(--text-heading);
+  margin-top: .25rem;
+}
+
+main {
+  overflow: auto;
+  background: var(--shape-body);
+  border-radius: .75rem;
+}
+
+main .main-container {
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+main h2 {
+  font: 700 1.75rem "Baloo 2", sans-serif;
+  color: var(--text-heading);
+  margin-bottom: 2.5rem;
 }
